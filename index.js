@@ -49,7 +49,8 @@ async function getDataNightinggale(url) {
     const dateNight = new Date(await dataJSON.body[0].date)
     nightingaleDate.innerHTML = ` ${dateNight.toDateString()}`
     nightingale.innerHTML = await dataJSON.body[0].cumAdmissions
-    nightingaleChange.innerHTML = await dataJSON.body[0].cumAdmissions - await dataJSON.body[7].cumAdmissions
+    const admissionsChange = await dataJSON.body[0].cumAdmissions - await dataJSON.body[7].cumAdmissions
+    nightingaleChange.innerHTML = admissionsChange > 0 ? `+ ${admissionsChange}` : admissionsChange == 0 ? `${admissionsChange}` : `${admissionsChange}`
     console.log(dataJSON.body[0])
     console.log(dataJSON.body)
     }
