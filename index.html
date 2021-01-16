@@ -9,15 +9,32 @@
   </head>
 
   <body>
-    <div class="title"><span>Covid 19</span><br>Statistics for Exeter, UK
-    <div class="date" id="date">Data harvested on</div>
-</div>
+    <div class="heading">Covid-19<br><br><div>Statistics for Exeter, UK</div></div>
     <div class="container">
-        
-        <div class="data"><span id="cumCases"></span> confirmed cases to date </div>
-        <div class="data"><span id="newCases"></span> positive tests over the preceeding 7 days</div>
-        <div class="data"><span id="cumDeaths"></span> deaths to date</div>
-        <div class="data"><span id="newDeaths"></span> deaths over the preceeding 7 days</div>
+        <div class="card">
+          <div class="title">Exeter LTLA</div>
+          <div class="date">Data collected:<span id="exeterDate"></span></div>
+          <div class="data"><span id="cumCases"></span> confirmed cases to date </div>
+          <div class="data"><span id="newCases"></span> positive tests preceeding 7 days</div>
+          <div class="data"><span id="cumDeaths"></span> deaths to date</div>
+          <div class="data"><span id="newDeaths"></span> deaths preceeding 7 days</div>
+        </div>
+        <div class="card">
+          <div class="title">Exeter Nightingale</div>
+          <div class="date">Data collected:<span id="nightingaleDate"></span></div>
+          <div class="data"><span id="nightingale"></span> patients</div>
+        <div class="data"><span id="nightingaleChange"></span> change on previous week</div>
+        </div>
+        <div class="card">
+          <div class="title">UK Vaccination Situation</div>
+          <div class="date">Data collected:<span id="ukDate"></span></div>
+          <div class="data"><span id="ukFirstVaccine"></span> have had first dose</div>
+          <div class="data"><span id="ukSecondVaccine"></span> have had second dose</div>
+        </div>
+    </div>
+    <div class="footer">
+      All data from <a href="https://coronavirus.data.gov.uk/">coronavirus.data.gov.uk</a>, which is updated most evenings.
+
     </div>
     <script src="index.js"></script>
   </body>

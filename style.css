@@ -1,44 +1,70 @@
 :root{
-    --title-size: 1.3rem;
+    --heading-size: 1.5rem;
+    --title-size: 1.2rem;
     --date-size: 1rem;
-    --data-size: 1.2rem;
-    --number-size: 2rem;
+    --data-size: 1rem;
+    --number-size: 1.4rem;
 }
 
 body{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    background-color: black;
+    padding: .1em .6em 0 .6em;
 }
 
 *{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
 }
 
 span{
     font-weight: 600;
-    font-size: var(--number-size);
+    font-size: var(--date-size);
+    color: chartreuse;
 }
 
 .container{
     display: grid;
     text-align: left;
     justify-content: center;
-    height: 40vh;
+    min-height: 40vh;
     align-content: center;
-    background-color:midnightblue;
-    padding: 2em 2em;
+
 }
 
-.title{
+.card{
+    padding: 1.5em 1.5em 3em 1.5em;
+    margin-bottom: 1em;
+    border-radius: .4em;
+    box-shadow: 2px 2px 2px #999;
+    background-color:midnightblue;
+    color: whitesmoke;
+
+}
+
+.footer{
+    text-align: center;
+    color: midnightblue;
+    margin: 2em 0;
+}
+
+.heading{
     display: grid;
     justify-content: center;
     text-align: center;
-    font-size: var(--title-size);
-    margin: 10vh 1em 4vh 1em;
+    font-size: var(--heading-size);
+    margin: 3vh 0 4vh 0;
+    color:midnightblue;
+    padding: 1.5em;
+    border-radius: .4em;
+    font-weight: 700;
   }
+
+.title{
+    font-size: var(--title-size);
+    text-align: center;
+    margin: 1.5em .5em;
+    font-weight: 600;
+}
 
 .date{
     margin: 1vh 0 4vh 0;
@@ -56,20 +82,24 @@ span{
 
 @media(min-width: 1000px){
     :root{
-        --title-size: 2rem;
+        --heading-size: 2.2rem;
         --date-size: 1.3rem;
         --data-size: 1.2rem;
         --number-size: 2rem;
     }
 
-    .title{
-        margin: 15vh 0 4vh 0;
+    .heading{
+        margin: 1vh 0 4vh 0;
         text-align: left;
 
     }
 
     .container{
-        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card{
+        margin: .5em;
     }
 }
 
